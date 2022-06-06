@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "yarn": "^1.22.18",
+    "testcafe": "^1.19.0"
+  }
+}
