@@ -15,13 +15,13 @@ fixture`Registration Fixture`
 test('Assert home page', async t => {
     await t
     .expect(getURL()).eql(URL)
+    .maximizeWindow()
     .takeScreenshot()
     .expect(homepage.subtitleHeader.exists).ok()
 });
 
 test('User Registration and Login Test',async t => {
  await t
-    .maximizeWindow()
      .click(homepage.RegisterLink)
      .expect(getURL()).contains('register')
      .click(registerpage.GenderOption)
