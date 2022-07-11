@@ -13,6 +13,8 @@ class RegisterPage{
         this.ConfirmPassword = Selector('#ConfirmPassword')
         this.RegisterButton = Selector('#register-button.button-1.register-next-step-button')
         this.SuccessfullMessage = Selector('div.result').withText('Your registration completed');
+        this.Myaccount = Selector('div.title')
+        this.OrdersPage = Selector('a').withText('Orders')
       }
 
       async selectDay(day){

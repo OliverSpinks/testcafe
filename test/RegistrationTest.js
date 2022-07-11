@@ -15,7 +15,6 @@ fixture`Registration Fixture`
 test('Assert home page', async t => {
     await t
     .expect(getURL()).eql(URL)
-    .maximizeWindow()
     .takeScreenshot()
     .expect(homepage.subtitleHeader.exists).ok()
 });
@@ -43,7 +42,7 @@ test('User Registration and Login Test',async t => {
      .typeText(loginpage.passwordInput,'123456')
      .click(loginpage.submitButton)
      .click(homepage.MyAccountLink)
-     .expect(customerpage.ordersLink.exists).ok()
-     .click(customerpage.ordersLink)
+     .click(registerpage.Myaccount)
+     .click(registerpage.OrdersPage)
      .expect(customerpage.noOrdersLabel.exists).ok();    
 })
