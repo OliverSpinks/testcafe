@@ -15,6 +15,7 @@ fixture`Registration Fixture`
 test('Assert home page', async t => {
     await t
     .expect(getURL()).eql(URL)
+    .resizeWindow(1190, 500)
     .takeScreenshot()
     .expect(homepage.subtitleHeader.exists).ok()
 });
