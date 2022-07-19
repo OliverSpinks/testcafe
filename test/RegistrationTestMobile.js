@@ -41,8 +41,11 @@ test('User Registration and Login Test',async t => {
      .typeText(loginpage.emailInput,userEmail)
      .typeText(loginpage.passwordInput,'123456')
      .click(loginpage.submitButton)
-     .click(homepage.MyAccountLink)
+     .click(homepage.MyAccountRemoteLink)
      .expect(customerpage.ordersLink.exists).ok()
+     .click(customerpage.AccountLinkRemote)
      .click(customerpage.ordersLink)
-     .expect(customerpage.noOrdersLabel.exists).ok();    
+     .expect(customerpage.noOrdersLabel.exists).ok()
+     .takeScreenshot()
+
 })

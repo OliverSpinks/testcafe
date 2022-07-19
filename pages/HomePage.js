@@ -9,6 +9,7 @@ class HomePage{
         this.LoginLink = Selector('a.ico-login')
         this.CartLink = Selector('a').withText('Shopping cart')
         this.MyAccountLink = Selector('a').withText('My account')
+        this.MyAccountRemoteLink = Selector ('a.ico-account')
         this.LogoutLink = Selector('a.ico-logout');
         this.currencyList = Selector('select#customerCurrency')
       }
